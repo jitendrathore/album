@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>New Album</title>
+</head>
+<body>
+	<div class="container text-center">
+		<h2 class="p-5 text-center">Add Album</h2>
+		<input class="form-control w-50 text-center" type="text" placeholder="Album Name" style="margin: 0 auto;"><br>
+		<div class="custom-file w-50">
+	    	<input type="file" name="pic" accept="image/*" class="custom-file-input">
+			<label class="custom-file-label rounded">Select Image</label>
+	  	</div>
+	  	<div class="text-center">
+	  		<button class="mt-5 btn btn-success" type="button">Create Album</button>
+	  	</div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+   	$(document).ready(function(){
+    	$('input[type="file"]').change(function(e){
+            var fileName = e.target.files[0].name;
+            $('label').html(fileName);
+        });
+    });
+</script>
+</body>
+</html>
